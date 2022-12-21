@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    nhập số : <br>
+    <input type="number" id="so_nhap"><button type="button" onclick="kiemTraSoChan()">kiểm tra</button>
+</body>
+
+</html>
+<script>
+    function kiemTraSoChan() {
+        let giaTri = document.getElementById("so_nhap").value;
+
+        let thongBao = '';
+
+        let soDu = giaTri % 2;
+
+        if (soDu === 0) {
+            thongBao = thongBao + `${giaTri} là số chẵn`;
+        } else {
+            thongBao += `${giaTri} là số lẻ`;
+        }
+
+        alert(thongBao);
+    }
+</script>
