@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Máy Tính</h1>
+    <p>
+        <input type="number" id="so1" />
+        <input type="number" id="so2" />
+    </p>
+    <button type="button" onclick="xu_ly('+')">phép Cộng (+)</button>
+    <button type="button" onclick="xu_ly('-')">phép trừ (-)</button>
+    <button type="button" onclick="xu_ly('x')">phép nhân (x)</button>
+    <button type="button" onclick="xu_ly('/')">phép chia (/)</button>
+    <div id="hienthi" style="font-size: 50px;color: rgb(199, 18, 18);text-align: center;"></div>
+</body>
+<script>
+
+    function xu_ly(pheptoan) {
+        let A = document.getElementById("so1").value;
+        let B = document.getElementById("so2").value;
+        if (A == '' || B == '') {
+            alert("hãy nhập dữ liệu");
+        }
+        if (A !== '' && B !== '') {
+            let ketqua = 0;
+            alert(pheptoan)
+            if (pheptoan === "+") {
+                ketqua = parseFloat(A) + parseFloat(B);
+            } if (pheptoan === "-") {
+                ketqua = parseFloat(A) - parseFloat(B);
+            } if (pheptoan === "x") {
+                ketqua = parseFloat(A) * parseFloat(B);
+            } if (pheptoan === "/") {
+                ketqua = parseFloat(A) / parseFloat(B);
+            }
+            document.getElementById("hienthi").innerHTML = `kết quả là : ${ketqua}`;
+        }
+
+    }
+
+</script>
+</body>
+
+</html>
